@@ -1,7 +1,7 @@
 {
   "name": "react-native-fabric-util",
   "version": "1.0.0",
-  "description": "Fabric Crashlytic enhancer",
+  "description": "Fabric Crashlytic enhancer Android",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,6 @@
     "react-native",
     "crashlytics",
     "fabric",
-    "ios",
     "android",
     "anhtuank7c"
   ],
