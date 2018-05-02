@@ -10,6 +10,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 23
@@ -28,9 +29,14 @@ android {
 
 repositories {
     mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
 }
 
 dependencies {
+    compile project(':react-native-fabric')
+    compile ('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true;
+    }
     compile 'com.facebook.react:react-native:+'
 }
   

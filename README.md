@@ -8,14 +8,22 @@
 
 ### Dependency
 
-This enhancer require `react-native-fabric`, you have to setup `Fabric` correctly first
+This enhancer required `[react-native-fabric](https://github.com/corymsmith/react-native-fabric)`, you have to setup `Fabric` correctly first
+
+
+### Automatic installation
+
+`$ react-native link react-native-fabric-util`
+
 
 ### Manual installation
 
+#### iOS
+Not available for now
 
 #### Android
 
-Open up `android/app/src/main/java/[...]/MainApplication.java`
+1.  Open up `android/app/src/main/java/[...]/MainApplication.java`
 
 
 ```
@@ -31,3 +39,14 @@ import vn.agiletech.fabricutil.ReactNativeFabricLogger; // INSET THIS LINE
   }
 }
 ```
+
+2.  Append the following lines to `android/settings.gradle`:
+    ```
+    include ':react-native-fabric-util'
+    project(':react-native-fabric-util').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-fabric-util/android')
+    ```
+3.  Insert the following lines inside the dependencies block in `android/app/build.gradle`:
+    ```
+      compile project(':react-native-fabric-util')
+    ```
+
